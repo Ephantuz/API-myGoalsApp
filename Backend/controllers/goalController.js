@@ -3,7 +3,7 @@ const getGoals = (req, res) => {
         goals: [
             {   // an array of objects  
                 id: 1,
-                name: 'Learn React',
+                name: 'Learn',
                 description: 'Get/read Goals',
                 completed: true
             }
