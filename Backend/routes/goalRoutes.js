@@ -1,18 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const{getGoals} =require('./../controllers/goalController');
 
-router.get('/', ( req, res) =>{
-    res.status(200).json({
-        goals: [
-            {   // an array of objects  
-                id: 1,
-                name: 'Learn React',
-                description: 'Get/read Goals',
-                completed: true
-            }
-        ] 
-    });
-});
+router.get('/', getGoals);
+
 router.post('/', ( req, res) =>{
     res.status(200).json({
         goals: [
