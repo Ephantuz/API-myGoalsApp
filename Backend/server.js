@@ -1,22 +1,17 @@
-const express = require("express");
+const express = require('express');
+const dotenv = require('dotenv');
+const port = process.env.PORT || 5000;
 
-const authRoute = require("./routes/auth");
-const goalsRoute = require("./routes/goals");
-
-const PORT = 4000;
 const app = express();
 
-app.use(express.json());
+app.use('/api/goals', require('./routes/goalRoutes'));
 
-app.set("view engine", "ejs");
 
-app.get("/", (req, res) => {
-res.render("home");
+
+
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
 
-app.use("/auth", authRoute);
-app.use("/goals", goalsRoute);
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server is running at http://localhost:${PORT}`);
-});

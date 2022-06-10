@@ -4,7 +4,7 @@
   "description": "simple application that tracs down your goals",
   "main": "app.js",
   "scripts": {
-    "test": "node Backend/server.js",
+    "start": "node Backend/server.js",
     "server": "nodemon Backend/server.js"
   },
   "author": "ephantus",
@@ -13,7 +13,7 @@
     "colors": "^1.4.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "mongoose": "^6.3.4"
+    "mongoose": "^6.3.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
